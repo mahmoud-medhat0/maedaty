@@ -2767,7 +2767,7 @@ $(document).ready(function() {
                 })
                 if ($("#view-grid").html() == "") {
                     $("#view-grid").html(
-                        "<div style='color:#fff;'>لا يوجد موائد معلقة فى هذه المحافظة!</div>"
+                        "<div style='color:#fff;'>لا يوجد موائد فى هذه المحافظة!</div>"
                     );
                 }
             }
