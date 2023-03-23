@@ -47,7 +47,7 @@ class Ma3datyController extends Controller
         }
         
     // Controller Function To Insert Data Of mawaied!
-    public function insert(Request $request)
+    public function insert(storeMa3datyRequest $request)
     {
         DB::table('ma3daty')->insert(
             [
