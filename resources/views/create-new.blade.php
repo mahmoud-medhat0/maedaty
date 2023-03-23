@@ -115,27 +115,27 @@
                         <option value="female">نساء</option>
                         <option value="all">الجميع</option>
                     </select>
+                    @error('for')
+                        <div class="alert alert-danger" style="color:rgb(226, 57, 57)">{{$message}}</div>
+                    @enderror
                     <select name="maedaType" class="@error('maedaType') is-invalid @enderror">
                         <option value="" aria-disabled="true">نوع المائدة</option>
                         <option value="maieda">مائدة</option>
                         <option value="meals">وجبات</option>
                     </select>
+                    @error('maedaType')
+                        <div class="alert alert-danger" style="color:rgb(226, 57, 57)">{{$message}}</div>
+                    @enderror
                     <select name="government_id" class="@error('government_id') is-invalid @enderror" id="government_id">
                         <option selected disabled aria-disabled="true">المحافظة</option>
                     </select>
+                    @error('government_id')
+                        <div class="alert alert-danger" style="color:rgb(226, 57, 57)">{{$message}}</div>
+                    @enderror
                     <select name="city_id" class="@error('city_id') is-invalid @enderror" id="city_id">
                         <option aria-disabled="true">المدينة / المركز</option>
                     </select>
-                    @error('number')
-                        <div class="alert alert-danger" style="color:rgb(226, 57, 57)">{{$message}}</div>
-                    @enderror
-                    @error('number')
-                        <div class="alert alert-danger" style="color:rgb(226, 57, 57)">{{$message}}</div>
-                    @enderror
-                    @error('number')
-                        <div class="alert alert-danger" style="color:rgb(226, 57, 57)">{{$message}}</div>
-                    @enderror
-                    @error('number')
+                    @error('city_id')
                         <div class="alert alert-danger" style="color:rgb(226, 57, 57)">{{$message}}</div>
                     @enderror
                 </div>
