@@ -45,7 +45,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.min.js"></script>
   
-    <style>
+  <style>
       #map {
         height: 300px;
         width: 500px;
@@ -59,9 +59,23 @@
             grid-column-gap: 25px;
             justify-content: center;
         }
+        @media (max-width: 400px){
+            li {
+            font-size: 8px;
+            }
+        }
         @media (max-width: 1200px){
+            .madety-settings{
+                display: block !important;
+            }
+            .madety-settings .gender a{
+                margin-left: 5px !important;
+            }
             .container {
                 width: 100%;
+            }
+            .madety-settings .menu a{
+                margin-left: 5px;
             }
             .boxs {
                 margin: auto;
@@ -76,11 +90,14 @@
             }
             .box {
                 background: var(--dark-color);
-                width: 390px;
+                width: 100%;
                 height: 200px;
                 padding: 25px 50px;
                 border-radius: 12px;
                 transition: 0.7s;
+            }
+            .add-madet{
+                width: auto;
             }
             .landing {
                 height: 40vh;
