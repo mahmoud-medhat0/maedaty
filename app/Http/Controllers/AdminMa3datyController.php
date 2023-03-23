@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Cache\RedisTagSet;
 use Illuminate\Support\Facades\DB;
@@ -40,8 +41,8 @@ class AdminMa3datyController extends Controller
     public function availableApi()
     {
         if (Auth::check()) {
-            
-        
+
+
         $response = DB::table('ma3daty')->where('status' , 1)->get(
             [
                 'id',
@@ -96,7 +97,7 @@ class AdminMa3datyController extends Controller
             return "تمت الإضافة بنجاح";
         }
         return redirect('login');
-        
+
     }
     // Show Amin Edit Page
     public function editpage($id)
@@ -128,7 +129,7 @@ class AdminMa3datyController extends Controller
             return redirect()->route('admin.edit', $id);
         }
         return redirect('login');
-        
+
     }
 
     // Delete One Row From Ma3da By Admin
@@ -211,6 +212,7 @@ class AdminMa3datyController extends Controller
                 'company' => $request->company,
                 'charge_number' => $request->char_number,
                 'virified' => 1,
+                'expire'=>Carbon::now()->addDay(1),
                 'charge_value' => $request->char_value,
             ]);
             return "تمت الإضافة بنجاح!";
