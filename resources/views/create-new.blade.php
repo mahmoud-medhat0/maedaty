@@ -45,7 +45,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.min.js"></script>
-  
+
     <style>
       #map {
         height: 300px;
@@ -94,8 +94,8 @@
             <div class="add-form">
                 <input type="text" name="title" placeholder="إسم المائدة :" value="" id="name">
                 <input type="text" name="address" placeholder="عنوان المائدة :" value = "" id="addreas">
-                <input name="lat" placeholder="lat" id="lat">
-                <input name="lng" placeholder="lng" id="lng">
+                <input name="lat" placeholder="خط الطول" id="lat">
+                <input name="lng" placeholder="خط العرض" id="lng">
                 <div class="selects">
                     <select name="for">
                         <option disabled>مخصص لـ</option>
@@ -188,7 +188,7 @@ map.on('click', function(e) {
         shadowSize: [5, 10],
         // shadowAnchor: [22, 94]
     });
-    
+
     marker = L.marker(e.latlng, {icon: myIcon, title: 'مائدة',riseOnHover: true,}).addTo(map)
     .bindPopup(`<b>${document.getElementById("name").value}</b>`,
     {offset: [0, 60] } ).openPopup(); // إضافة علامة جديدة
@@ -687,7 +687,7 @@ map.on('click', function(e) {
                     `);
                 }
             })
-                
+
         })
     });
 </script>
