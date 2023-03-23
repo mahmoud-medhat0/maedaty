@@ -51,6 +51,11 @@
         height: 300px;
         width: 500px;
       }
+      @media (max-width: 1200px){
+        li {
+                font-size: 12px
+            }
+        }
     </style>
 </head>
 

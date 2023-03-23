@@ -45,19 +45,22 @@
         padding: 75px 0;
     }
     @media (max-width: 1200px){
-            .container {
-                width: 100% !important;
-            }
-            .view-grid{
-                width: fit-content;
-                margin: auto
-            }
-            .view-cardP
-            {
-                padding: 45px 20px;
-            }
-
+        .container {
+            width: 100% !important;
         }
+        .view-grid{
+            width: fit-content;
+            margin: auto
+        }
+        .view-cardP
+        {
+            padding: 45px 20px;
+        }
+        li {
+            font-size: 12px
+        }
+    }
+    
     </style>
 </head>
 

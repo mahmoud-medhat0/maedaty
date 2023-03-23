@@ -22,7 +22,7 @@ class storeCardsRequest extends FormRequest
     public function rules(): array
     {
         return [
-                'number' => "required|max:14",
+                'number' => "required|max:16",
                 'company' => "required",
                 'char_number' => "required",
                 'char_value' => "required",

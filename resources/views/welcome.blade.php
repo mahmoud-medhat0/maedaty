@@ -104,6 +104,9 @@
             .box:last-child {
                 border-radius: 12px 12px 12px 12px;
             }
+            li {
+                font-size: 12px
+            }
         }
 
     </style>
