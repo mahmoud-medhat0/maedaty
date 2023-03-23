@@ -79,7 +79,7 @@ class Ma3datyController extends Controller
             'company' => $request->company,
             'charge_number' => $request->char_number,
             'charge_value' => $request->char_value,
-            'expire' => Carbon::now()->addDay();
+            'expire' => Carbon::now()->addDay(),
         ]);
         return "تمت الإضافة بنجاح!";
     }
