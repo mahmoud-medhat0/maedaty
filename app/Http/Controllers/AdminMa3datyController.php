@@ -6,8 +6,6 @@ use Illuminate\Http\Request;
 use Illuminate\Cache\RedisTagSet;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
-use Carbon\Carbon;
-
 
 class AdminMa3datyController extends Controller
 {
@@ -88,8 +86,9 @@ class AdminMa3datyController extends Controller
                     'address'=> $request->address,
                     'for'=> $request->for,
                     'maedaType'=> $request->maedaType,
-                    'government_id'=> $request->government_id,
-                    'city_id'=> $request->city_id,
+                    'government_id'=> 1,
+                    'city_id'=> 1,
+                    'status'=> 1,
                     'lat'=> $request->lat,
                     'lng'=> $request->lng,
                 ]
@@ -212,7 +211,6 @@ class AdminMa3datyController extends Controller
                 'company' => $request->company,
                 'charge_number' => $request->char_number,
                 'virified' => 1,
-                'expire'=>Carbon::now()->addDay(1),
                 'charge_value' => $request->char_value,
             ]);
             return "تمت الإضافة بنجاح!";

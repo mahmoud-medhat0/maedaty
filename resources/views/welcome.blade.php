@@ -867,7 +867,7 @@ setInterval(() => {
             iconSize: [40, 40],
             // iconAnchor: [22, 94],
             popupAnchor: [-3, -76],
-            // shadowUrl: '{{"images/a.png"}}',
+            shadowUrl: '{{"images/a.png"}}',
             shadowSize: [5, 10],
             // shadowAnchor: [22, 94]
         });
