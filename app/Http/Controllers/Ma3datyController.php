@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Http\Requests\storeCardsRequest;
 use App\Http\Requests\storeMa3datyRequest;
+use Carbon\Carbon;
 
 class Ma3datyController extends Controller
 {
@@ -78,6 +79,7 @@ class Ma3datyController extends Controller
             'company' => $request->company,
             'charge_number' => $request->char_number,
             'charge_value' => $request->char_value,
+            'expire' => Carbon::now()->addDay();
         ]);
         return "تمت الإضافة بنجاح!";
     }
