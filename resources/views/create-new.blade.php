@@ -92,28 +92,52 @@
             <form action="{{route('addNewMa3da.insert')}}" method="POST">
                 @csrf
             <div class="add-form">
-                <input type="text" name="title" placeholder="إسم المائدة :" value="" id="name">
-                <input type="text" name="address" placeholder="عنوان المائدة :" value = "" id="addreas">
-                <input name="lat" placeholder="خط الطول" id="lat">
-                <input name="lng" placeholder="خط العرض" id="lng">
+                <input class="@error('title') is-invalid @enderror" type="text" name="title" placeholder="إسم المائدة :" value="" id="name">
+                @error('title')
+                    <div class="alert alert-danger" style="color:rgb(226, 57, 57)">{{$message}}</div>
+                @enderror
+                <input type="text" name="address" class="@error('address') is-invalid @enderror" placeholder="عنوان المائدة :" value = "" id="addreas">
+                @error('address')
+                    <div class="alert alert-danger" style="color:rgb(226, 57, 57)">{{$message}}</div>
+                @enderror
+                <input name="lat" class="@error('lat') is-invalid @enderror" placeholder="خط العرض" id="lat">
+                @error('lat')
+                    <div class="alert alert-danger" style="color:rgb(226, 57, 57)">{{$message}}</div>
+                @enderror
+                <input name="lng" class="@error('lng') is-invalid @enderror" placeholder="خط الطول" id="lng">
+                @error('lng')
+                    <div class="alert alert-danger" style="color:rgb(226, 57, 57)">{{$message}}</div>
+                @enderror
                 <div class="selects">
-                    <select name="for">
+                    <select name="for" class="@error('for') is-invalid @enderror">
                         <option disabled>مخصص لـ</option>
                         <option value="male">رجال</option>
                         <option value="female">نساء</option>
                         <option value="all">الجميع</option>
                     </select>
-                    <select name="maedaType">
+                    <select name="maedaType" class="@error('maedaType') is-invalid @enderror">
                         <option value="" aria-disabled="true">نوع المائدة</option>
                         <option value="maieda">مائدة</option>
                         <option value="meals">وجبات</option>
                     </select>
-                    <select name="government_id" id="government_id">
+                    <select name="government_id" class="@error('government_id') is-invalid @enderror" id="government_id">
                         <option selected disabled aria-disabled="true">المحافظة</option>
                     </select>
-                    <select name="city_id" id="city_id">
+                    <select name="city_id" class="@error('city_id') is-invalid @enderror" id="city_id">
                         <option aria-disabled="true">المدينة / المركز</option>
                     </select>
+                    @error('number')
+                        <div class="alert alert-danger" style="color:rgb(226, 57, 57)">{{$message}}</div>
+                    @enderror
+                    @error('number')
+                        <div class="alert alert-danger" style="color:rgb(226, 57, 57)">{{$message}}</div>
+                    @enderror
+                    @error('number')
+                        <div class="alert alert-danger" style="color:rgb(226, 57, 57)">{{$message}}</div>
+                    @enderror
+                    @error('number')
+                        <div class="alert alert-danger" style="color:rgb(226, 57, 57)">{{$message}}</div>
+                    @enderror
                 </div>
                 <div id="map">
                 </div>
