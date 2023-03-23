@@ -1,0 +1,47 @@
+:root {
+    --main-color: #091f3f;
+    --dark-color: #143166;
+    --light-color: #87cefa;
+    --stars-color: #4c2a13;
+    --paragraph-color: #e09234;
+};
+
+.stars {
+    position: relative;
+}
+
+i {
+    filter: drop-shadow(0px 0px 1px var(--paragraph-color));
+}
+
+.stars i:nth-child(1) {
+    color: var(--paragraph-color);
+    position: absolute;
+    top: 15%;
+    right: 5%;
+    transform: rotate(20deg);
+}
+
+.stars i:nth-child(2) {
+    color: var(--paragraph-color);
+    position: absolute;
+    bottom: 10%;
+    left: 12%;
+    transform: rotate(340deg);
+}
+
+.stars i:nth-child(3) {
+    color: var(--paragraph-color);
+    position: absolute;
+    top: 10%;
+    left: 12%;
+    transform: rotate(340deg);
+}
+
+.stars i:nth-child(4) {
+    color: var(--paragraph-color);
+    position: absolute;
+    bottom: 5%;
+    right: 3%;
+    transform: rotate(15deg);
+}

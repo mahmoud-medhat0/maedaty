@@ -1,0 +1,296 @@
+/* Start Globel Rules */
+
+@font-face {
+    font-family: 'Tajawal-3';
+    src: url("../Tajawal/Amiri-Regular.ttf");
+}
+
+@font-face {
+    font-family: 'Tajawal-2';
+    src: url("../Tajawal/Tajawal-Regular.ttf");
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    direction: rtl;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Tajawal-2', sans-serif;
+    background-color: var(--main-color);
+}
+
+body::-moz-focus-inner {
+    color: var(--dark-color);
+}
+  
+body::-webkit-scrollbar {
+    width: 0.8em;
+    background-color: var(--dark-color);
+}
+  
+body::-webkit-scrollbar-thumb {
+    background-color: var(--light-color);
+    box-shadow: 0px 0px 30px 30px var(--light-color);
+}
+
+ul {
+    list-style: none;
+}
+
+::selection {
+    color: var(--light-color);
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 97px;
+}
+
+/* SML */
+@media (max-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+/* MED */
+@media (max-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+/* LAG */
+@media (max-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+/* End Globel Rules */
+
+/* Start of Preload */
+
+#bgLoading {
+    position: fixed;
+    z-index: 999998;
+    width: 100%;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    backdrop-filter: blur(70px);
+    transition: 1s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loader {
+	width: 108px;
+	height: 108px;
+	border-radius: 50%;
+	display: inline-block;
+	border-top: 4px solid #FFF;
+	border-right: 4px solid transparent;
+	box-sizing: border-box;
+	animation: rotation 1s linear infinite;
+}
+
+.loader::after {
+	content: '';  
+	box-sizing: border-box;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 108px;
+	height: 108px;
+	border-radius: 50%;
+	border-left: 4px solid var(--dark-color);
+	border-bottom: 4px solid transparent;
+	animation: rotation 0.5s linear infinite reverse;
+}
+
+@keyframes rotation {
+	0% {
+	  transform: rotate(0deg);
+	}
+	100% {
+	  transform: rotate(360deg);
+	}
+} 
+
+/* End of Preload */
+
+/* Start of NavBar */
+
+nav {
+    text-align: center;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 1px solid var(--dark-color);
+}
+
+li {
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+a {
+    color: var(--paragraph-color);
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+a:hover {
+    color: var(--light-color);
+}
+
+ul img {
+    width: 65px;
+}
+
+/* End of NavBar */
+
+/* Start of Form */
+
+
+.add-table {
+    position: relative;
+    text-align: center;
+    max-height: 100vh;
+    max-width: 100%;
+}
+
+.add-heading {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.add-heading h2 {
+    font-size: 34px;
+    color: #FFF;
+}
+
+.add-heading p {
+    font-size: 18px;
+    color: #777;
+}
+
+.add-form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+    background-color: var(--dark-color);
+    width: 45%;
+    height: 4.5vh;
+    margin-bottom: 15px;
+    padding: 0 15px;
+    font-family: 'Tajawal-2';
+    border: none;
+    font-size: 16px;
+    border-radius: 4px;
+    color: #FFF;
+    cursor: pointer;
+}
+
+.add-btn {
+    margin-top: 30px;
+    width: 20%;
+    transition: 0.7s;
+}
+
+.add-btn:hover {
+    transform: scale(1.1);
+}
+
+input:focus,
+input:active {
+    border: none;
+    outline: none;
+    box-shadow: 0 4px 8px 0 rgba(21,21,21,.2);
+}
+
+svg {
+    width: 100%;
+    height: max-content;
+    margin-bottom: -5px;
+    position: absolute;
+    left: 0;
+    bottom: -277;
+}
+
+label {
+    font-size: 16px;
+    font-weight: 600;
+    color: #777;
+}
+
+.selects {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+
+select {
+    text-align: right;
+    background: transparent;
+    border: none;
+    font-size: 16px;
+    font-family: 'Tajawal-2';
+    padding-left: 22px;
+    outline: none;
+    color: var(--paragraph-color);
+}
+
+select::-webkit-scrollbar {
+    width: 0.2em;
+    background-color: var(--stars-color);
+}
+
+select::-webkit-scrollbar-thumb {
+    background-color: var(--paragraph-color);
+}
+
+.madety-map iframe {
+    margin-top: 10px;
+    width: 550px;
+    height: 250px;
+    border-radius: 0.25rem;
+    border: 0;
+}
+
+.madety-map h4 {
+    text-align: center;
+    color: #777;
+}
+
+.madety-map span {
+    color: var(--paragraph-color);
+}
+
+/* End of Form */
