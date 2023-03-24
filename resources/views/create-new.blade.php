@@ -175,7 +175,6 @@
         </div>
     </div>
 </body>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script
 src="https://unpkg.com/leaflet/dist/leaflet.js"
 crossorigin=""
@@ -191,7 +190,8 @@ integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""><
 src="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.js"
 ></script>
 <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
-
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
 // إنشاء الخريطة
 var map = L.map("map").setView([30.033333, 31.233334], 4);
