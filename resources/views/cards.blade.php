@@ -49,9 +49,9 @@
 </head>
 
 <body>
-    <div id="bgLoading">
+    <!-- <div id="bgLoading">
         <span class="loader"></span>
-    </div>
+    </div> -->
     <div id="nav" class="nav-bar">
         <div id="nav" class="nav-bar">
             <nav>
