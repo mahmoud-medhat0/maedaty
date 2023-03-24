@@ -56,13 +56,16 @@
                 font-size: 12px
             }
         }
+      @media (max-width: 800px){
+        #map {
+        height: 300px;
+        width: 100%;
+      }
+        }
     </style>
 </head>
 
 <body>
-    <div id="bgLoading">
-        <span class="loader"></span>
-    </div>
     <div id="nav" class="nav-bar">
         <div id="nav" class="nav-bar">
             <nav>
@@ -172,7 +175,6 @@
         </div>
     </div>
 </body>
-{{-- <script src="main.js"></script> --}}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script
 src="https://unpkg.com/leaflet/dist/leaflet.js"
